@@ -81,14 +81,15 @@ model.summary()
 model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['accuracy'])
 
 history=model.fit(trained_dataset,epochs=10,validation_data=testing_dataset)
+#------------------------------------------------------------------
+#test-data
+#import cv2
 
-import cv2
+#test_img=cv2.imread('/content/cat-img.jpeg')
 
-test_img=cv2.imread('/content/cat-img.jpeg')
+#plt.imshow(test_img)
 
-plt.imshow(test_img)
+#test_img=cv2.resize(test_img,(256,256))
+#test_input=test_img.reshape((1,256,256,3))
 
-test_img=cv2.resize(test_img,(256,256))
-test_input=test_img.reshape((1,256,256,3))
-
-model.predict(test_input)
+#model.predict(test_input)
